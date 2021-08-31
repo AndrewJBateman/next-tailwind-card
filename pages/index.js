@@ -11,6 +11,8 @@ import {
 	FaShoppingCart,
 } from 'react-icons/fa';
 
+import { prefix } from '../utils/prefix';
+
 export default function Home() {
 	return (
 		<>
@@ -50,7 +52,7 @@ export default function Home() {
 						<NextImage
 							alt="meter"
 							height="224px"
-							src="/meter.png"
+              src={`${prefix}/meter.png`}
 							width="224px"
 						/>
 					</div>
