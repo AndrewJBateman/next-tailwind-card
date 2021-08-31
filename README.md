@@ -26,9 +26,9 @@
 
 * Next.js used for frontend is for server-rendered react apps. It has automatic code splitting, simple page-based routing, built-in CSS support and hot reloading. Every component file in the pages folder is treated as a page
 * Tailwind CSS added to Next.js as part of [Next.js example app](https://tailwindcss.com/docs/guides/nextjs)
+* [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) used for Tailwind CSS.
 * Progressive Web App (PWA) enabled. Latest Next v11 used includes server code and makes adding PWA much easier
 * [Custom Document](https://nextjs.org/docs/advanced-features/custom-document) `pages/_document` used to add to app's <html> and <body> tags
-
 
 ## :camera: Screenshots
 
@@ -40,7 +40,7 @@
 * [React icons v4](https://www.npmjs.com/package/react-icons)
 * [Next v11](https://nextjs.org/) minimalist framework for rendering react apps on the server.
 * [Tailwind v2](https://tailwindcss.com/) utility-first CSS framework
-* [PostCSS](https://postcss.org/) tool for transforming CSS with JavaScript
+* [PostCSS v8](https://postcss.org/) tool for transforming CSS with JavaScript
 * [pngTree](https://pngtree.com/) downloadable images, png etc.
 * [pwa-asset-generator v4](https://www.npmjs.com/package/pwa-asset-generator) Automated PWA asset generation and image declaration. Creates icons and JSON array for PWA manifest.json file
 
@@ -94,8 +94,8 @@ render() {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working.
-* To-Do: Deploy
+* Status: Working. [Deployed to Netlify](https://festive-lamarr-61ac43.netlify.app/)
+* To-Do: Keep updated and use as boilerplate app
 
 ## :clap: Inspiration
 
@@ -103,6 +103,7 @@ render() {
 * [Next.js example app](https://tailwindcss.com/docs/guides/nextjs)
 * [Not Science Lab: Product Card Tutorial (Next.js, Tailwind CSS and react-icons)](https://www.youtube.com/watch?v=E11eRGweC3M)
 * [Convert your website into a PWA in 8 simple steps](https://milindsoorya.site/blog/convert-your-website-into-a-pwa-in-8-simple-steps-next-js-pwa-series-part-2#step-6-edit-your-_documentjs-file)
+* [How to Deploy Next.js Sites to Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
 
 ## :file_folder: License
 
