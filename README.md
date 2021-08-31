@@ -1,6 +1,6 @@
 # :zap: Next Tailwind Card
 
-* A Next.js + Tailwind app to create a reusable card component with React-icons
+* A PWA Next/Tailwind template app with card component and perfect Lighthouse score
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/next-tailwind-card?style=plastic)
@@ -26,6 +26,9 @@
 
 * Next.js used for frontend is for server-rendered react apps. It has automatic code splitting, simple page-based routing, built-in CSS support and hot reloading. Every component file in the pages folder is treated as a page
 * Tailwind CSS added to Next.js as part of [Next.js example app](https://tailwindcss.com/docs/guides/nextjs)
+* Progressive Web App (PWA) enabled. Latest Next v11 used includes server code and makes adding PWA much easier
+* [Custom Document](https://nextjs.org/docs/advanced-features/custom-document) `pages/_document` used to add to app's <html> and <body> tags
+
 
 ## :camera: Screenshots
 
@@ -39,6 +42,7 @@
 * [Tailwind v2](https://tailwindcss.com/) utility-first CSS framework
 * [PostCSS](https://postcss.org/) tool for transforming CSS with JavaScript
 * [pngTree](https://pngtree.com/) downloadable images, png etc.
+* [pwa-asset-generator v4](https://www.npmjs.com/package/pwa-asset-generator) Automated PWA asset generation and image declaration. Creates icons and JSON array for PWA manifest.json file
 
 ## :floppy_disk: Setup
 
@@ -48,21 +52,57 @@
 
 ## :computer: Code Examples
 
-* tba
+* `pages/_document` HTML render used to add custom HTML to existing Next document page
 
-```tsx
-
+```javascript
+render() {
+	return (
+		<Html lang="en">
+			<Head>
+				<meta
+					name="description"
+					content="Build a Next.js PWA with 100% lighthouse score"
+				></meta>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0"
+				/>
+				<meta name="theme-color" content="#0D47A1" />
+				<link rel="manifest" href="/manifest.json" />
+				<link
+					href="/favicon-16x16.png"
+					rel="icon"
+					type="image/png"
+					sizes="16x16"
+				/>
+				<link
+					href="/favicon-32x32.png"
+					rel="icon"
+					type="image/png"
+					sizes="32x32"
+				/>
+				<link rel="apple-touch-icon" href="/apple-icon.png"></link>
+			</Head>
+			<body>
+				<Main />
+				<NextScript />
+			</body>
+		</Html>
+	);
+}
 ```
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working.
-* To-Do: Add PWA, _document, 100% Lighthouse, deploy to github pages
+* To-Do: Deploy
 
 ## :clap: Inspiration
 
 * [Install Tailwind CSS with Next.js](https://tailwindcss.com/docs/guides/nextjs)
+* [Next.js example app](https://tailwindcss.com/docs/guides/nextjs)
 * [Not Science Lab: Product Card Tutorial (Next.js, Tailwind CSS and react-icons)](https://www.youtube.com/watch?v=E11eRGweC3M)
+* [Convert your website into a PWA in 8 simple steps](https://milindsoorya.site/blog/convert-your-website-into-a-pwa-in-8-simple-steps-next-js-pwa-series-part-2#step-6-edit-your-_documentjs-file)
 
 ## :file_folder: License
 
