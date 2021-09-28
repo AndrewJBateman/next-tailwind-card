@@ -1,6 +1,12 @@
-import Head from 'next/head';
-import NextImage from 'next/image';
-import NextLink from 'next/link';
+import React from "react";
+import { useNotes } from "../context/NotesContext";
+import Layout from "../components/Layout";
+import { useRouter } from "next/router";
+import { VscTrash, VscTasklist } from "react-icons/vsc";
+
+import Head from "next/head";
+import NextImage from "next/image";
+import NextLink from "next/link";
 import {
 	FaChevronLeft,
 	FaStar,
@@ -9,21 +15,60 @@ import {
 	FaMinus,
 	FaPlus,
 	FaShoppingCart,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
-import { prefix } from '../utils/prefix';
+import { prefix } from "../utils/prefix";
 
-export default function Home() {
+const Home = () => {
+	const { notes, deleteNote } = useNotes();
+	const router = useRouter();
+
 	return (
 		<>
 			<Head>
 				<title>Next Tailwind Card</title>
 			</Head>
-			{/* Container */}
-			<div className="flex items-center justify-center h-screen bg-gray-100">
-				{/* Product card */}
+			<Layout>
+				<div className="flex justify-center">
+					{notes.length === 0 ? (
+						<div className="block">
+							<h2 className="text-2xl">No notes made</h2>
+							<VscTasklist size="8rem" />
+						</div>
+					) : (
+						<div className="w-7/10">
+							{notes.map((note, i) => (
+								<div
+									key={note.id}
+									className="flex justify-between px-20 py-5 m-2 bg-gray-700 cursor-pointer hover:bg-gray-600"
+									onClick={() => router.push("/edit/" + note.id)}
+								>
+									<span className="mr-5 text-5xl">{i}</span>
+									<div>
+										<div className="flex justify-between">
+											<h1 className="font-bold">{note.title}</h1>
+											<button
+												className="inline-flex items-center px-3 py-1 bg-red-700 hover:bg-red-600"
+												onClick={(e) => {
+													e.stopPropagation();
+													deleteNote(note.id);
+												}}
+											>
+												<VscTrash className="mr-2" /> Delete
+											</button>
+										</div>
+										<p className="text-gray-300">{note.description}</p>
+										<span className="text-gray-400">{note.id}</span>
+									</div>
+								</div>
+							))}
+						</div>
+					)}
+				</div>
+			</Layout>
+
+			{/* <div className="flex items-center justify-center h-screen bg-gray-100">
 				<div className="flex flex-col w-full max-w-xs space-y-4 duration-300 transform bg-white shadow-lg rounded-xl hover:-translate-y-2">
-					{/* Buttons for back, reviews & favorite */}
 					<div className="flex flex-row items-center justify-between px-4 pt-4">
 						<button
 							aria-label="go back"
@@ -47,17 +92,15 @@ export default function Home() {
 						</div>
 					</div>
 
-					{/* image */}
 					<div className="flex justify-center">
 						<NextImage
 							alt="meter"
 							height="224px"
-              src={`${prefix}/meter.png`}
+							src={`${prefix}/meter.png`}
 							width="224px"
 						/>
 					</div>
 
-					{/* title, options & quantity */}
 					<div className="flex flex-col px-4 space-y-1">
 						<div className="flex flex-col -space-y-0.5">
 							<NextLink href="/">
@@ -106,7 +149,6 @@ export default function Home() {
 						</div>
 					</div>
 
-					{/* price, add to cart */}
 					<div className="flex flex-row items-center justify-between px-4 pb-4">
 						<h1 className="text-2xl font-medium">$456</h1>
 						<button
@@ -118,7 +160,9 @@ export default function Home() {
 						</button>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</>
 	);
-}
+};
+
+export default Home;
