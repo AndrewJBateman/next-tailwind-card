@@ -9,30 +9,23 @@ const Layout = ({ children }) => {
 	const { notes } = useNotes();
 
 	return (
-		<div className="h-screen text-white bg-gray-900">
-			<header className="flex items-center py-5 bg-gray-800 px-28">
+		<div className="h-screen bg-gray-50">
+			<header className="flex items-center px-16 py-5 bg-gray-100">
 				<Link href="/">
 					<a>
-						<h1 className="text-lg font-black">Notes App</h1>
+						<h1 className="text-lg">Notes ({notes.length})</h1>
 					</a>
 				</Link>
-
-				<span className="ml-2 font-bold text-gray-400">
-					{notes.length} notes
-				</span>
-
 				<div className="flex-grow text-right">
-					<button
-						className="inline-flex items-center px-5 py-2 font-bold bg-blue-500 rounded-sm hover:bg-green-400 text-gray"
-						onClick={() => router.push("/new")}
+					<button className="p-2 text-white bg-blue-600 rounded-sm hover:bg-blue-800"
+						onClick={() => router.push("/create")}
 					>
-						<AiOutlinePlus className="mr-2" />
-						Add Note
+						<AiOutlinePlus />
 					</button>
 				</div>
 			</header>
 
-			<main className="py-10 h-5/6 px-28">{children}</main>
+			<main className="bg-gray-100">{children}</main>
 		</div>
 	);
 };
