@@ -94,16 +94,18 @@ render() {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working. [Deployed to Netlify](https://festive-lamarr-61ac43.netlify.app/)
-* To-Do: Keep updated and use as boilerplate app
+* Status: Working CRUD app but needs work. All data lost upon refresh. [Deployed to Netlify](https://festive-lamarr-61ac43.netlify.app/)
+* To-Do: Replace create & edit page styling. Add nav with about & contact links. Add card component, add about & contact cards
 
 ## :clap: Inspiration
 
 * [Install Tailwind CSS with Next.js](https://tailwindcss.com/docs/guides/nextjs)
+* [Tailwind CSS: Customizing Colors](https://tailwindcss.com/docs/customizing-colors)
 * [Next.js example app](https://tailwindcss.com/docs/guides/nextjs)
 * [Not Science Lab: Product Card Tutorial (Next.js, Tailwind CSS and react-icons)](https://www.youtube.com/watch?v=E11eRGweC3M)
 * [Convert your website into a PWA in 8 simple steps](https://milindsoorya.site/blog/convert-your-website-into-a-pwa-in-8-simple-steps-next-js-pwa-series-part-2#step-6-edit-your-_documentjs-file)
 * [How to Deploy Next.js Sites to Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
+* [hasinhayder/tailwind-cards](https://github.com/hasinhayder/tailwind-cards/blob/master/index.html)
 
 ## :file_folder: License
 
