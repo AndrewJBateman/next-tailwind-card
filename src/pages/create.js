@@ -29,6 +29,7 @@ const NoteFormPage = () => {
 		router.push("/");
 	};
 
+  //useEffect runs after the first render & every update
 	useEffect(() => {
 		if (router.query.id) {
 			const noteFound = notes.find((note) => note.id === router.query.id);
@@ -42,7 +43,7 @@ const NoteFormPage = () => {
 			<div className="flex items-center justify-center h-full">
 				<form className="p-10 bg-gray-700 h-2/4" onSubmit={handleSubmit}>
 					<h1 className="text-3xl mb-7">
-						{router.query.id ? "Edit Note" : "New Note"}
+						{router.query.id ? "Edit Note" : "Create Note"}
 					</h1>
 					<input
 						type="text"

@@ -18,16 +18,18 @@ const Home = () => {
 			<Layout>
 				<div>
 					{notes.length === 0 ? (
-						<section class="container mx-auto p-10 md:p-20 transform duration-500">
-							<article class="flex flex-wrap md:flex-nowrap shadow-lg mx-auto max-w-xl ">
+						<section clasName="container p-10 mx-auto duration-500 transform md:p-20">
+							<article className="flex flex-wrap max-w-xl mx-auto shadow-lg md:flex-nowrap ">
 								<img
-									class="w-full md:w-40 h-auto"
+									className="w-full h-auto md:w-40"
 									src="https://weandthecolor.com/wp-content/uploads/2012/03/A-Way-Out-Illustration-by-Matheus-Lopes-4563464.jpg"
 									alt=""
 								/>
-								<div class="p-10 my-auto">
-									<h1 class="text-2xl font-semibold text-gray-800">No notes</h1>
-									<p class="text-base text-gray-400 mt-2">
+								<div className="p-10 my-auto">
+									<h1 className="text-2xl font-semibold text-gray-800">
+										No notes
+									</h1>
+									<p className="mt-2 text-base text-gray-400">
 										Click '+' to add a note
 									</p>
 								</div>
@@ -41,13 +43,12 @@ const Home = () => {
 									className="text-white bg-white rounded-lg shadow-md h-50 w-50"
 									onClick={() => router.push("/edit/" + note.id)}
 								>
-									<section class="container mx-auto p-4 md:p-4 transform duration-500">
-										{/* <article> */}
+									<section className="container p-4 mx-auto duration-500 transform md:p-4">
 										<div>
-											<h1 class="text-2xl font-semibold text-gray-800">
+											<h1 className="text-2xl font-semibold text-gray-800">
 												{note.title}
 											</h1>
-											<p class="text-base text-gray-400 mt-2">
+											<p className="mt-2 text-base text-gray-400">
 												{note.description}
 											</p>
 											<button
@@ -59,27 +60,8 @@ const Home = () => {
 											>
 												<VscTrash />
 											</button>
-										</div>
-										{/* </article> */}
+                    </div>
 									</section>
-
-									{/* <span className="mr-5 text-5xl">{i}</span>
-									<div>
-										<div className="flex justify-between">
-											<h1 className="font-bold">{note.title}</h1>
-											<button
-												className="inline-flex items-center px-3 py-1 bg-red-700 hover:bg-red-600"
-												onClick={(e) => {
-													e.stopPropagation();
-													deleteNote(note.id);
-												}}
-											>
-												<VscTrash className="mr-2" /> Delete
-											</button>
-										</div>
-										<p className="text-gray-300">{note.description}</p>
-										<span className="text-gray-400">{note.id}</span>
-									</div> */}
 								</div>
 							))}
 						</div>

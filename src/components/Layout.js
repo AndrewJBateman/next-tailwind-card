@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useNotes } from "../context/NotesContext";
 
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const Layout = ({ children }) => {
 	const router = useRouter();
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 					<button className="p-2 text-white bg-blue-600 rounded-sm hover:bg-blue-800"
 						onClick={() => router.push("/create")}
 					>
-						<AiOutlinePlus />
+						<AiOutlinePlusCircle />
 					</button>
 				</div>
 			</header>
