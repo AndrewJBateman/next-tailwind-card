@@ -29,6 +29,8 @@
 * [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) used for Tailwind CSS.
 * Progressive Web App (PWA) enabled. Latest Next v11 used includes server code and makes adding PWA much easier
 * [Custom Document](https://nextjs.org/docs/advanced-features/custom-document) `pages/_document` used to add to app's <html> and <body> tags
+* [Next.js State Management](https://www.smashingmagazine.com/2021/08/state-management-nextjs/) NotesContext: note data is passed from provider to consumer, avoids props drilling from React passing data from top to bottom
+* [Nextjs useEffect Hook]() is like componentDidMount, componentDidUpdate, and componentWillUnmount combined. They don't run during Server Side Rendering (SSR). UseEffect runs after rendering
 
 ## :camera: Screenshots
 
@@ -37,7 +39,7 @@
 ## :signal_strength: Technologies
 
 * [React v17](https://reactjs.org/) Javascript library.
-* [React icons v4](https://www.npmjs.com/package/react-icons)
+* [React icons v4](https://www.npmjs.com/package/react-icons), full list [here](https://react-icons.github.io/react-icons)
 * [Next v11](https://nextjs.org/) minimalist framework for rendering react apps on the server.
 * [Tailwind v2](https://tailwindcss.com/) utility-first CSS framework
 * [PostCSS v8](https://postcss.org/) tool for transforming CSS with JavaScript
@@ -105,6 +107,7 @@ render() {
 * [Not Science Lab: Product Card Tutorial (Next.js, Tailwind CSS and react-icons)](https://www.youtube.com/watch?v=E11eRGweC3M)
 * [Convert your website into a PWA in 8 simple steps](https://milindsoorya.site/blog/convert-your-website-into-a-pwa-in-8-simple-steps-next-js-pwa-series-part-2#step-6-edit-your-_documentjs-file)
 * [How to Deploy Next.js Sites to Netlify](https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/)
+* [codewith hugo: Why doesn't React.useEffect run on React server-side renders (SSR)?](https://codewithhugo.com/react-useeffect-ssr/)
 * [hasinhayder/tailwind-cards](https://github.com/hasinhayder/tailwind-cards/blob/master/index.html)
 
 ## :file_folder: License
